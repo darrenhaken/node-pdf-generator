@@ -1,0 +1,23 @@
+{
+  "name": "node-pdf-generator",
+  "version": "0.0.1",
+  "description": "Web server to generate PDF's from HTML",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/darrenhaken/node-pdf-generator.git"
+  },
+  "keywords": [
+    "pdf"
+  ],
+  "author": "Darren Haken",
+  "license": "BSD",
+  "readmeFilename": "README.md",
+  "gitHead": "923eb4e2f46531f6c85e85666f044d2af935fa83",
+  "dependencies": {
+    "wkhtmltopdf": "~0.1.3"
+  }
+}
