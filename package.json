@@ -1,6 +1,6 @@
 {
   "name": "node-pdf-generator",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Web server to generate PDF's from HTML",
   "main": "index.js",
   "scripts": {
