@@ -4,7 +4,7 @@ var http = require('http'),
 
 http
     .createServer(acceptHtmlAndProvidePdf)
-    .listen(1337, '127.0.0.1');
+    .listen(1337, '0.0.0.0');
 
 function acceptHtmlAndProvidePdf(request, response) {
     console.log('Request received: ' + request);
