@@ -9,8 +9,12 @@ http
 function acceptHtmlAndProvidePdf(request, response) {
     console.log('Request received: ' + request);
 
+    request.content = '';
+
     request.addListener("data", function (chunk) {
-        request.content += chunk;
+        if (chunk) {
+            request.content += chunk;
+        }
     });
 
     request.addListener("end", function () {
@@ -19,6 +23,7 @@ function acceptHtmlAndProvidePdf(request, response) {
         htmlToPdf(request.content)
             .pipe(response);
 
+        response.end();
         console.log('Processed HTML to PDF: ' + response);
     });
 }
