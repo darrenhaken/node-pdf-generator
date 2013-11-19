@@ -1,6 +1,5 @@
 var http = require('http'),
-    htmlToPdf = require('wkhtmltopdf'),
-    path = require('path');
+    htmlToPdf = require('wkhtmltopdf')
 
 http
     .createServer(acceptHtmlAndProvidePdf)
@@ -23,7 +22,6 @@ function acceptHtmlAndProvidePdf(request, response) {
         htmlToPdf(request.content)
             .pipe(response);
 
-        response.end();
         console.log('Processed HTML to PDF: ' + response);
     });
 }
