@@ -1,9 +1,10 @@
 var http = require('http'),
-    htmlToPdf = require('wkhtmltopdf')
+    htmlToPdf = require('wkhtmltopdf'),
+    conf = require('./lib/conf.js')
 
 http
     .createServer(acceptHtmlAndProvidePdf)
-    .listen(1337, '0.0.0.0');
+    .listen(conf.port, conf.bindIp);
 
 function acceptHtmlAndProvidePdf(request, response) {
     console.log('Request received: ' + request);
@@ -26,8 +27,4 @@ function acceptHtmlAndProvidePdf(request, response) {
     });
 }
 
-console.log('Server running at http://127.0.0.1:1337/');
-
-
-
-
+console.log('Server running at http://' + conf.bindIp + ':' + conf.port + '/');
