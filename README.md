@@ -20,5 +20,10 @@ Install npm, and then do this:
 
 ## Usage
 
-	node index.js
+Basic usage with default configuration:
 
+    node index.js
+
+The server can be configured using any method supported by [*nconf*](https://npmjs.org/package/nconf), for example from a bash shell:
+
+    port=1338 bindIp=0.0.0.0 node index.js
